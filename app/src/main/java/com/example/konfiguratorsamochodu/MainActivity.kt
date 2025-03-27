@@ -5,6 +5,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import android.widget.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,5 +17,22 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val radioGroup = findViewById<RadioGroup>(R.id.radioGroup)
+        val checkBoxKlimatyzacja = findViewById<CheckBox>(R.id.checkBoxKlimatyzacja)
+        val checkBoxSkorzaneSiedzenia = findViewById<CheckBox>(R.id.checkBoxSkorzaneSiedzenia)
+        val buttonZatwierdz = findViewById<Button>(R.id.buttonZatwierdz)
+        val textViewPodsumowanie = findViewById<TextView>(R.id.textViewPodsumowanie)
+        val imageViewCar = findViewById<ImageView>(R.id.imageViewCar)
+
+        radioGroup.setOnCheckedChangeListener { _, checkedId ->
+            when(checkedId){
+                R.id.radioSedan -> imageViewCar.setImageResource(R.drawable.sedan)
+                R.id.radioSUV -> imageViewCar.setImageResource(R.drawable.suv)
+                R.id.radioHatchback -> imageViewCar.setImageResource(R.drawable.hatchback)
+                else -> {}
+            }
+        }
+
     }
 }
