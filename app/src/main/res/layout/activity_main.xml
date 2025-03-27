@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wybierz model samochodu:"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_margin="8dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radioSedan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sedan" />
+
+        <RadioButton
+            android:id="@+id/radioSUV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SUV" />
+
+        <RadioButton
+            android:id="@+id/radioHatchback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hatchback" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opcje dodatkowe:"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_margin="12dp" />
+
+    <CheckBox
+        android:id="@+id/checkBoxKlimatyzacja"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Klimatyzacja" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSkorzaneSiedzenia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skórzane siedzenia" />
+
+    <ImageView
+        android:id="@+id/imageViewCar"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="12dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/bialypiksel" />
+
+    <Button
+        android:id="@+id/buttonZatwierdz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zatwierdź konfigurację"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:id="@+id/textViewPodsumowanie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20dp"
+        android:layout_margin="12dp"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+</LinearLayout>
